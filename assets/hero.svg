@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 520 520" role="img" aria-label="メインマスコットが手を振るイラスト">
+  <defs>
+    <linearGradient id="heroDisk" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFE7DC"/>
+      <stop offset="1" stop-color="#FFCFE3"/>
+    </linearGradient>
+    <linearGradient id="heroBubble" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF3EE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- soft backdrop disk -->
+  <circle cx="260" cy="270" r="210" fill="url(#heroDisk)"/>
+  <circle cx="260" cy="270" r="210" fill="none" stroke="#FFFFFF" stroke-width="10" opacity="0.6"/>
+
+  <!-- floating sticker bubbles -->
+  <g class="float-a">
+    <rect x="46" y="92" width="92" height="92" rx="26" fill="url(#heroBubble)" stroke="#3A3A3A" stroke-width="5"/>
+    <circle cx="92" cy="132" r="26" fill="#FFD25E"/>
+    <path d="M80 130 q12 -14 24 0" fill="none" stroke="#3A3A3A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M82 144 q10 10 20 0" fill="none" stroke="#3A3A3A" stroke-width="4" stroke-linecap="round"/>
+  </g>
+  <g class="float-b">
+    <rect x="382" y="120" width="86" height="86" rx="24" fill="url(#heroBubble)" stroke="#3A3A3A" stroke-width="5"/>
+    <path d="M425 144 a13 13 0 0 1 24 0 a13 13 0 0 1 24 0 q0 18 -24 32 q-24 -14 -24 -32 Z" transform="translate(-24,4)" fill="#FF6B8B"/>
+  </g>
+  <g class="float-a">
+    <rect x="392" y="318" width="80" height="80" rx="22" fill="url(#heroBubble)" stroke="#3A3A3A" stroke-width="5"/>
+    <path d="M414 358 l12 14 l24 -30" fill="none" stroke="#4ECDC4" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- main mascot (rounded cat) -->
+  <g class="bob">
+    <!-- body -->
+    <ellipse cx="260" cy="360" rx="118" ry="104" fill="#FFFFFF" stroke="#3A3A3A" stroke-width="8"/>
+    <!-- waving arm -->
+    <g class="wave">
+      <circle cx="370" cy="262" r="30" fill="#FFFFFF" stroke="#3A3A3A" stroke-width="8"/>
+    </g>
+    <!-- ears -->
+    <path d="M176 150 L214 232 L138 224 Z" fill="#FFFFFF" stroke="#3A3A3A" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M344 150 L382 224 L306 232 Z" fill="#FFFFFF" stroke="#3A3A3A" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M180 168 L206 222 L156 216 Z" fill="#FFC2DD"/>
+    <path d="M340 168 L362 216 L314 222 Z" fill="#FFC2DD"/>
+    <!-- head -->
+    <circle cx="260" cy="252" r="116" fill="#FFFFFF" stroke="#3A3A3A" stroke-width="8"/>
+    <!-- cheeks -->
+    <circle cx="194" cy="274" r="26" fill="#FFB1C4" opacity="0.9"/>
+    <circle cx="326" cy="274" r="26" fill="#FFB1C4" opacity="0.9"/>
+    <!-- eyes happy -->
+    <path d="M198 244 q18 -24 36 0" fill="none" stroke="#3A3A3A" stroke-width="8" stroke-linecap="round"/>
+    <path d="M286 244 q18 -24 36 0" fill="none" stroke="#3A3A3A" stroke-width="8" stroke-linecap="round"/>
+    <!-- nose / mouth -->
+    <path d="M254 274 l12 0 l-6 8 z" fill="#FF7AA6"/>
+    <path d="M260 282 q-18 22 -36 8 M260 282 q18 22 36 8" fill="none" stroke="#3A3A3A" stroke-width="7" stroke-linecap="round"/>
+    <!-- whiskers -->
+    <path d="M150 268 l46 8 M150 292 l46 -2 M370 268 l-46 8 M370 292 l-46 -2" stroke="#3A3A3A" stroke-width="4.5" stroke-linecap="round"/>
+  </g>
+</svg>

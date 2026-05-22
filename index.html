@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AKIRU | イラストレーター・LINEスタンプ作家のポートフォリオ</title>
+  <meta name="description" content="毎日にちょっとの“かわいい”を届けるイラストレーター／LINEスタンプ作家 AKIRU のポートフォリオ。キャラクターデザイン、スタンプ制作、グッズ展開のご依頼を承ります。" />
+  <meta name="theme-color" content="#FF7A59" />
+
+  <!-- OGP -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AKIRU | イラストレーター・LINEスタンプ作家" />
+  <meta property="og:description" content="毎日にちょっとの“かわいい”を。キャラクター制作のご依頼を承ります。" />
+  <meta property="og:image" content="assets/hero.svg" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Google Fonts（見出し:Zen Maru Gothic / 本文:Noto Sans JP / 数字英字:Poppins）。失敗時はデバイスフォントへフォールバック -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@500;600;700;800&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ============ ヘッダー / グローバルナビ ============ -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="#hero" class="logo" aria-label="AKIRU トップへ">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">AKIRU</span>
+      </a>
+
+      <nav class="gnav" id="gnav" aria-label="グローバルナビゲーション">
+        <ul>
+          <li><a href="#works" class="nav-link">Works</a></li>
+          <li><a href="#skills" class="nav-link">Skills</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#value" class="nav-link">Value</a></li>
+          <li><a href="#pricing" class="nav-link">Pricing</a></li>
+          <li><a href="#contact" class="nav-cta">お問い合わせ</a></li>
+        </ul>
+      </nav>
+
+      <button class="hamburger" id="hamburger" aria-label="メニューを開く" aria-expanded="false" aria-controls="gnav">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ 1. Hero ============ -->
+    <section class="hero" id="hero">
+      <div class="hero-blob hero-blob-1" aria-hidden="true"></div>
+      <div class="hero-blob hero-blob-2" aria-hidden="true"></div>
+
+      <div class="container hero-inner">
+        <div class="hero-copy reveal">
+          <p class="hero-tagline">Illustrator &amp; LINE Sticker Creator</p>
+          <h1 class="hero-title">毎日に、<br />ちょっとの<span class="accent">“かわいい”</span>を。</h1>
+          <p class="hero-lead">
+            くすっと笑えて、つい使いたくなる。<br />
+            そんなキャラクターとLINEスタンプをつくる、<br class="pc-only" />イラストレーター <strong>AKIRU</strong> です。
+          </p>
+
+          <ul class="hero-stats" aria-label="実績">
+            <li>
+              <span class="num" data-count="120" data-suffix="+">0</span>
+              <span class="label">制作スタンプ数</span>
+            </li>
+            <li>
+              <span class="num" data-count="35" data-suffix="万+">0</span>
+              <span class="label">累計ダウンロード</span>
+            </li>
+            <li>
+              <span class="num" data-count="6" data-suffix="年">0</span>
+              <span class="label">制作歴</span>
+            </li>
+          </ul>
+
+          <div class="hero-actions">
+            <a href="#works" class="btn btn-primary">作品を見る</a>
+            <a href="#contact" class="btn btn-ghost">お問い合わせ</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal">
+          <img src="assets/hero.svg" alt="手を振るマスコットキャラクターのイラスト" width="520" height="520" />
+        </div>
+      </div>
+
+      <a href="#works" class="scroll-indicator" aria-label="下へスクロール">
+        <span class="mouse"><span class="wheel"></span></span>
+        <span class="scroll-text">Scroll</span>
+      </a>
+    </section>
+
+    <!-- ============ 2. Works ============ -->
+    <section class="section works" id="works">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-eyebrow">Works</p>
+          <h2 class="section-title">制作したスタンプたち</h2>
+          <p class="section-desc">これまでにお届けしてきたキャラクター＆スタンプの一例です。カードをクリックすると詳細をご覧いただけます。</p>
+        </header>
+
+        <ul class="works-grid" id="worksGrid">
+          <!-- 各カードは JS のデータからも参照されます（モーダル用） -->
+          <li class="work-card reveal" data-work="mochimaru">
+            <div class="work-thumb">
+              <img src="assets/works/mochimaru.svg" alt="しろくまキャラクター もちまる" loading="lazy" />
+              <span class="work-hover">詳細を見る</span>
+            </div>
+            <div class="work-body">
+              <h3 class="work-name">もちまる の毎日</h3>
+              <ul class="work-tags"><li>Procreate</li><li>Photoshop</li></ul>
+              <p class="work-excerpt">ふんわりやさしいしろくま。あいさつ系40種の定番スタンプ。</p>
+              <button class="work-detail-btn" type="button">詳細を見る</button>
+            </div>
+          </li>
+
+          <li class="work-card reveal" data-work="mike">
+            <div class="work-thumb">
+              <img src="assets/works/mike.svg" alt="三毛猫キャラクター みけ" loading="lazy" />
+              <span class="work-hover">詳細を見る</span>
+            </div>
+            <div class="work-body">
+              <h3 class="work-name">みけねこ日和</h3>
+              <ul class="work-tags"><li>Clip Studio</li><li>Illustrator</li></ul>
+              <p class="work-excerpt">気まぐれ三毛猫の関西弁スタンプ。ツッコミ表現が大人気。</p>
+              <button class="work-detail-btn" type="button">詳細を見る</button>
+            </div>
+          </li>
+
+          <li class="work-card reveal" data-work="pyoko">
+            <div class="work-thumb">
+              <img src="assets/works/pyoko.svg" alt="うさぎキャラクター ぴょこ" loading="lazy" />
+              <span class="work-hover">詳細を見る</span>
+            </div>
+            <div class="work-body">
+              <h3 class="work-name">うさぎの ぴょこ</h3>
+              <ul class="work-tags"><li>Procreate</li><li>After Effects</li></ul>
+              <p class="work-excerpt">恋する乙女うさぎ。動くアニメーションスタンプ24種。</p>
+              <button class="work-detail-btn" type="button">詳細を見る</button>
+            </div>
+          </li>
+
+          <li class="work-card reveal" data-work="mame">
+            <div class="work-thumb">
+              <img src="assets/works/mame.svg" alt="柴犬キャラクター まめ" loading="lazy" />
+              <span class="work-hover">詳細を見る</span>
+            </div>
+            <div class="work-body">
+              <h3 class="work-name">柴犬 まめ太郎</h3>
+              <ul class="work-tags"><li>Photoshop</li><li>Illustrator</li></ul>
+              <p class="work-excerpt">元気いっぱいの柴犬。敬語スタンプでビジネスでも活躍。</p>
+              <button class="work-detail-btn" type="button">詳細を見る</button>
+            </div>
+          </li>
+
+          <li class="work-card reveal" data-work="penta">
+            <div class="work-thumb">
+              <img src="assets/works/penta.svg" alt="ペンギンキャラクター ぺんた" loading="lazy" />
+              <span class="work-hover">詳細を見る</span>
+            </div>
+            <div class="work-body">
+              <h3 class="work-name">ぺんた と仲間たち</h3>
+              <ul class="work-tags"><li>Clip Studio</li><li>Procreate</li></ul>
+              <p class="work-excerpt">おっとり南極ペンギン。リアクション豊かな表情40種。</p>
+              <button class="work-detail-btn" type="button">詳細を見る</button>
+            </div>
+          </li>
+
+          <li class="work-card reveal" data-work="ponta">
+            <div class="work-thumb">
+              <img src="assets/works/ponta.svg" alt="パンダキャラクター ぽんた" loading="lazy" />
+              <span class="work-hover">詳細を見る</span>
+            </div>
+            <div class="work-body">
+              <h3 class="work-name">ねむねむ ぽんた</h3>
+              <ul class="work-tags"><li>Procreate</li><li>Photoshop</li></ul>
+              <p class="work-excerpt">いつも眠そうなパンダ。ゆるっと癒し系の日常スタンプ。</p>
+              <button class="work-detail-btn" type="button">詳細を見る</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 3. Skills ============ -->
+    <section class="section skills" id="skills">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-eyebrow">Skills</p>
+          <h2 class="section-title">できること</h2>
+          <p class="section-desc">「キャラクターを生み出す」から「世に送り出す」まで。一気通貫でお手伝いします。</p>
+        </header>
+
+        <ul class="skills-grid">
+          <li class="skill-card reveal">
+            <span class="skill-icon" aria-hidden="true">🎨</span>
+            <h3>キャラクターデザイン</h3>
+            <p>世界観のヒアリングから、愛されるキャラクターの誕生まで。</p>
+            <span class="skill-level" data-level="5" aria-label="習熟度 5段階中 5"></span>
+          </li>
+          <li class="skill-card reveal">
+            <span class="skill-icon" aria-hidden="true">💬</span>
+            <h3>LINEスタンプ制作</h3>
+            <p>審査ガイドラインに沿った制作と申請まで一貫対応。</p>
+            <span class="skill-level" data-level="5" aria-label="習熟度 5段階中 5"></span>
+          </li>
+          <li class="skill-card reveal">
+            <span class="skill-icon" aria-hidden="true">✨</span>
+            <h3>アニメーションスタンプ</h3>
+            <p>くるっと動く、思わず笑える動きのある表現も得意です。</p>
+            <span class="skill-level" data-level="4" aria-label="習熟度 5段階中 4"></span>
+          </li>
+          <li class="skill-card reveal">
+            <span class="skill-icon" aria-hidden="true">🖼️</span>
+            <h3>デジタルイラスト</h3>
+            <p>SNSアイコン、挿絵、バナーなど用途に合わせて制作。</p>
+            <span class="skill-level" data-level="5" aria-label="習熟度 5段階中 5"></span>
+          </li>
+          <li class="skill-card reveal">
+            <span class="skill-icon" aria-hidden="true">🛍️</span>
+            <h3>グッズ・ロゴ展開</h3>
+            <p>キャラクターを活かしたグッズやロゴへの展開もおまかせ。</p>
+            <span class="skill-level" data-level="4" aria-label="習熟度 5段階中 4"></span>
+          </li>
+          <li class="skill-card reveal">
+            <span class="skill-icon" aria-hidden="true">🤝</span>
+            <h3>丁寧なディレクション</h3>
+            <p>初めての方にもわかりやすく、安心して進められる進行を。</p>
+            <span class="skill-level" data-level="5" aria-label="習熟度 5段階中 5"></span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 4. About ============ -->
+    <section class="section about" id="about">
+      <div class="container about-inner">
+        <div class="about-visual reveal">
+          <img src="assets/about.svg" alt="タブレットでイラストを描く制作者のアバター" width="440" height="440" />
+        </div>
+        <div class="about-copy reveal">
+          <p class="section-eyebrow">About</p>
+          <h2 class="section-title">はじめまして、AKIRU です</h2>
+          <p>
+            フリーランスのイラストレーター／LINEスタンプ作家として活動しています。
+            「使うたびに、ちょっと心がほどける」——そんなキャラクターづくりを大切にしています。
+          </p>
+          <p>
+            もともとは会社員のかたわら趣味で描いていたスタンプが思いがけず人気となり、独立。
+            以来6年間で120を超えるスタンプを制作し、累計35万ダウンロードを達成しました。
+          </p>
+          <p>
+            こだわりは「線のやさしさ」と「ちょうどいいゆるさ」。
+            キャラクターの“性格”が伝わる表情づくりを何より楽しんでいます。
+          </p>
+          <ul class="about-facts">
+            <li><span>拠点</span>日本・オンライン対応</li>
+            <li><span>得意</span>動物・ゆるかわ・日常表現</li>
+            <li><span>道具</span>iPad / Procreate / Photoshop</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">お仕事のご相談はこちら</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 5. Value ============ -->
+    <section class="section value" id="value">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-eyebrow">Value</p>
+          <h2 class="section-title">AKIRU に頼む理由</h2>
+          <p class="section-desc">ただ「かわいい」だけじゃない。あなたのブランドの“顔”になるキャラクターを、戦略から考えます。</p>
+        </header>
+
+        <ul class="value-grid">
+          <li class="value-card reveal">
+            <span class="value-no">01</span>
+            <h3>「伝わる」キャラ設計</h3>
+            <p>見た目だけでなく、誰に何を届けたいかを起点に。使う人が思わず手にとるキャラクターを設計します。</p>
+          </li>
+          <li class="value-card reveal">
+            <span class="value-no">02</span>
+            <h3>審査通過のノウハウ</h3>
+            <p>LINEスタンプの審査基準を熟知。リジェクトを防ぎ、最短ルートでの公開をサポートします。</p>
+          </li>
+          <li class="value-card reveal">
+            <span class="value-no">03</span>
+            <h3>スピーディーな納品</h3>
+            <p>明確なスケジュールと中間共有で、安心。最短2週間でのスタンプ公開実績があります。</p>
+          </li>
+          <li class="value-card reveal">
+            <span class="value-no">04</span>
+            <h3>長く使える資産に</h3>
+            <p>スタンプから始まり、グッズ・SNS・広告へ。長く育てられるIPとしてキャラクターを設計します。</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ 6. Pricing ============ -->
+    <section class="section pricing" id="pricing">
+      <div class="container">
+        <header class="section-head reveal">
+          <p class="section-eyebrow">Pricing</p>
+          <h2 class="section-title">料金の目安</h2>
+          <p class="section-desc">内容によって変動します。まずはお気軽にご相談ください。お見積もりは無料です。</p>
+        </header>
+
+        <ul class="pricing-grid">
+          <li class="price-card reveal">
+            <h3 class="price-name">スタンプ ベーシック</h3>
+            <p class="price-amount"><span class="yen">¥</span>40,000<span class="price-unit">〜</span></p>
+            <ul class="price-feats">
+              <li>既存キャラ／8〜16種</li>
+              <li>静止スタンプ</li>
+              <li>申請データ書き出し込み</li>
+              <li>修正2回まで</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost">相談する</a>
+          </li>
+
+          <li class="price-card price-card--featured reveal">
+            <span class="price-badge">人気</span>
+            <h3 class="price-name">キャラ＋スタンプ</h3>
+            <p class="price-amount"><span class="yen">¥</span>120,000<span class="price-unit">〜</span></p>
+            <ul class="price-feats">
+              <li>オリジナルキャラ設計</li>
+              <li>24〜40種のスタンプ</li>
+              <li>審査申請サポート</li>
+              <li>修正3回まで</li>
+            </ul>
+            <a href="#contact" class="btn btn-primary">相談する</a>
+          </li>
+
+          <li class="price-card reveal">
+            <h3 class="price-name">ブランド展開</h3>
+            <p class="price-amount"><span class="yen">¥</span>250,000<span class="price-unit">〜</span></p>
+            <ul class="price-feats">
+              <li>キャラ＋世界観設計</li>
+              <li>アニメーションスタンプ</li>
+              <li>グッズ／ロゴ展開</li>
+              <li>ガイドライン納品</li>
+            </ul>
+            <a href="#contact" class="btn btn-ghost">相談する</a>
+          </li>
+        </ul>
+        <p class="pricing-note">※ 表示は税抜の参考価格です。商用利用・追加点数・お急ぎ対応などは別途お見積もりいたします。</p>
+      </div>
+    </section>
+
+    <!-- ============ 7. Contact ============ -->
+    <section class="section contact" id="contact">
+      <div class="container contact-inner reveal">
+        <p class="section-eyebrow light">Contact</p>
+        <h2 class="section-title">一緒に“かわいい”をつくりましょう</h2>
+        <p class="contact-lead">
+          ご相談・お見積もりは無料です。下記のいずれかからお気軽にどうぞ。<br />
+          数日以内にお返事します。
+        </p>
+
+        <div class="contact-links">
+          <a class="contact-btn mail" href="mailto:akiru3388@example.com">
+            <span class="ci" aria-hidden="true">✉️</span>
+            <span class="ct"><strong>メール</strong>akiru3388@example.com</span>
+          </a>
+          <a class="contact-btn x" href="https://x.com/" target="_blank" rel="noopener noreferrer">
+            <span class="ci" aria-hidden="true">𝕏</span>
+            <span class="ct"><strong>X (Twitter)</strong>@akiru_sticker</span>
+          </a>
+          <a class="contact-btn ig" href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+            <span class="ci" aria-hidden="true">📷</span>
+            <span class="ct"><strong>Instagram</strong>@akiru.illust</span>
+          </a>
+          <a class="contact-btn line" href="https://store.line.me/" target="_blank" rel="noopener noreferrer">
+            <span class="ci" aria-hidden="true">💬</span>
+            <span class="ct"><strong>LINE Creators</strong>スタンプ一覧を見る</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ フッター ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="logo-mark" aria-hidden="true"></span>
+        <span class="logo-text">AKIRU</span>
+        <p>毎日に、ちょっとの“かわいい”を。</p>
+      </div>
+      <nav class="footer-nav" aria-label="フッターナビゲーション">
+        <a href="#works">Works</a>
+        <a href="#skills">Skills</a>
+        <a href="#about">About</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="footer-social">
+        <a href="https://x.com/" target="_blank" rel="noopener noreferrer" aria-label="X (Twitter)">𝕏</a>
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">📷</a>
+        <a href="https://store.line.me/" target="_blank" rel="noopener noreferrer" aria-label="LINE Creators">💬</a>
+        <a href="mailto:akiru3388@example.com" aria-label="メール">✉️</a>
+      </div>
+    </div>
+    <p class="copyright">© 2026 AKIRU. All rights reserved.</p>
+  </footer>
+
+  <!-- 常時表示の問い合わせCTA（モバイル中心） -->
+  <a href="#contact" class="floating-cta" aria-label="お問い合わせへ">お問い合わせ</a>
+
+  <!-- ページトップへ戻る -->
+  <button class="to-top" id="toTop" aria-label="ページトップへ戻る" type="button">↑</button>
+
+  <!-- ============ 作品モーダル ============ -->
+  <div class="modal" id="workModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-overlay" data-close></div>
+    <div class="modal-panel" role="document">
+      <button class="modal-close" data-close aria-label="閉じる" type="button">×</button>
+
+      <div class="modal-grid">
+        <div class="modal-visual">
+          <img id="modalImg" src="" alt="" />
+        </div>
+        <div class="modal-info">
+          <p class="modal-eyebrow" id="modalCat"></p>
+          <h3 class="modal-title" id="modalTitle"></h3>
+          <p class="modal-desc" id="modalDesc"></p>
+
+          <dl class="modal-meta">
+            <div><dt>役割</dt><dd id="modalRole"></dd></div>
+            <div><dt>使用ツール</dt><dd id="modalTools"></dd></div>
+            <div><dt>制作期間</dt><dd id="modalPeriod"></dd></div>
+          </dl>
+
+          <div class="modal-actions">
+            <a id="modalStore" class="btn btn-primary" href="#" target="_blank" rel="noopener noreferrer">LINEストアで見る</a>
+            <a href="#contact" class="btn btn-ghost" data-close>同じテイストで相談する</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="modal-nav">
+        <button class="modal-prev" id="modalPrev" type="button">‹ 前の作品</button>
+        <button class="modal-next" id="modalNext" type="button">次の作品 ›</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
