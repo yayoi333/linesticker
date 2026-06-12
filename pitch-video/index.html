@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>HyperFrames Pitch</title>
+<style>
+  @font-face { font-family:'Noto Sans JP'; font-weight:400; font-style:normal; src:url('fonts/NotoSansJP-Regular.ttf') format('truetype'); }
+  @font-face { font-family:'Noto Sans JP'; font-weight:900; font-style:normal; src:url('fonts/NotoSansJP-Black.ttf') format('truetype'); }
+  @font-face { font-family:'Inter'; font-weight:900; font-style:normal; src:url('fonts/Inter-Black.ttf') format('truetype'); }
+  @font-face { font-family:'JetBrains Mono'; font-weight:400; font-style:normal; src:url('fonts/JetBrainsMono-Regular.ttf') format('truetype'); }
+</style>
+<script src="gsap.min.js"></script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    background: #0d0d12;
+    font-family: 'Noto Sans JP', sans-serif;
+  }
+
+  #root {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+  }
+
+  .scene {
+    position: absolute;
+    inset: 0;
+    width: 1920px;
+    height: 1080px;
+    background: #0d0d12;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 120px 160px;
+  }
+
+  #scene2, #scene3, #scene4, #scene5, #scene6 { opacity: 0; }
+
+  .label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 22px;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: #00c3ff;
+  }
+  .h1 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+    font-size: 112px;
+    line-height: 1.05;
+    color: #f4f4f6;
+    margin-top: 24px;
+  }
+  .h2 {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 900;
+    font-size: 72px;
+    line-height: 1.1;
+    color: #f4f4f6;
+    margin-top: 16px;
+  }
+  .body {
+    font-size: 36px;
+    line-height: 1.6;
+    color: rgba(244,244,246,0.55);
+    margin-top: 32px;
+    max-width: 1100px;
+  }
+  .accent { color: #00c3ff; }
+  .warm   { color: #ff6040; }
+
+  .divider {
+    width: 80px;
+    height: 4px;
+    background: #00c3ff;
+    margin-top: 40px;
+  }
+
+  #s1-glow {
+    position: absolute;
+    width: 900px;
+    height: 900px;
+    right: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(0,195,255,0.12) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .code-block {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 32px;
+    line-height: 1.7;
+    color: #f4f4f6;
+    background: rgba(0,195,255,0.07);
+    border-left: 4px solid #00c3ff;
+    padding: 32px 48px;
+    margin-top: 40px;
+    width: 900px;
+  }
+  .code-block .cm { color: rgba(244,244,246,0.4); }
+  .code-block .kw { color: #00c3ff; }
+  .code-block .st { color: #ff6040; }
+
+  .stat-row {
+    display: flex;
+    gap: 80px;
+    margin-top: 48px;
+  }
+  .stat { display: flex; flex-direction: column; gap: 12px; }
+  .stat-num {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 96px;
+    color: #00c3ff;
+    line-height: 1;
+  }
+  .stat-desc { font-size: 28px; color: rgba(244,244,246,0.55); }
+
+  .feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 48px;
+  }
+  .feature-item {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    font-size: 40px;
+    color: #f4f4f6;
+  }
+  .feature-item::before {
+    content: '';
+    display: block;
+    width: 12px;
+    height: 12px;
+    background: #00c3ff;
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  #s6-big {
+    font-family: 'Inter', sans-serif;
+    font-weight: 900;
+    font-size: 128px;
+    color: #f4f4f6;
+    line-height: 1;
+    margin-top: 24px;
+  }
+  #s6-url {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 36px;
+    color: #00c3ff;
+    margin-top: 40px;
+    letter-spacing: 0.06em;
+  }
+</style>
+</head>
+<body>
+
+<div id="root" data-composition-id="main" data-start="0" data-duration="45" data-fps="30" data-width="1920" data-height="1080">
+
+<!-- ── SCENE 1: Title (0–5s, track 0) ── -->
+<section id="scene1" class="scene clip" data-start="0" data-duration="5" data-track-index="0">
+  <div id="s1-glow"></div>
+  <p  id="s1-label" class="label">Open Source · 2026</p>
+  <h1 id="s1-h1"    class="h1">HTMLで動画を<br>作る時代へ。</h1>
+  <p  id="s1-h2"    class="h2" style="color:rgba(244,244,246,0.55)">HyperFrames — HTML-to-Video</p>
+</section>
+
+<!-- ── SCENE 2: Problem (4.5–10s, track 1 — overlaps with scene1 during blur transition) ── -->
+<section id="scene2" class="scene clip" data-start="4.5" data-duration="5.5" data-track-index="1">
+  <p  id="s2-label" class="label">The Problem</p>
+  <h1 id="s2-h1"    class="h1" style="font-size:88px">動画制作は<br><span class="warm">高コスト</span>で<span class="warm">非効率</span>。</h1>
+  <p  id="s2-body"  class="body">専用ソフト、手作業の書き出し、<br>バージョン管理不能、再現性ゼロ。</p>
+  <div id="s2-div"  class="divider"></div>
+</section>
+
+<!-- ── SCENE 3: Solution (10–18s, track 0) ── -->
+<section id="scene3" class="scene clip" data-start="10" data-duration="8" data-track-index="0">
+  <p  id="s3-label" class="label">The Solution</p>
+  <h1 id="s3-h1"    class="h1" style="font-size:88px">HTMLを書けば<br><span class="accent">MP4</span>になる。</h1>
+  <div id="s3-code" class="code-block">
+    <span class="cm"># 1行でレンダリング</span><br>
+    <span class="kw">npx</span> hyperframes <span class="st">render</span><br>
+    <span class="cm"># → output.mp4  30fps  1920×1080</span>
+  </div>
+</section>
+
+<!-- ── SCENE 4: Numbers (18–28s, track 1) ── -->
+<section id="scene4" class="scene clip" data-start="18" data-duration="10" data-track-index="1">
+  <p id="s4-label" class="label">By The Numbers</p>
+  <h2 id="s4-h1"   class="h2">決定論的レンダリング。<span class="accent">毎回同じ結果。</span></h2>
+  <div id="s4-stats" class="stat-row">
+    <div id="s4-s1" class="stat">
+      <span class="stat-num">30</span>
+      <span class="stat-desc">fps — フレームレート</span>
+    </div>
+    <div id="s4-s2" class="stat">
+      <span class="stat-num">1行</span>
+      <span class="stat-desc">レンダリングコマンド</span>
+    </div>
+    <div id="s4-s3" class="stat">
+      <span class="stat-num">100%</span>
+      <span class="stat-desc">再現性保証</span>
+    </div>
+  </div>
+</section>
+
+<!-- ── SCENE 5: Features (28–38s, track 0) ── -->
+<section id="scene5" class="scene clip" data-start="28" data-duration="10" data-track-index="0">
+  <p id="s5-label" class="label">Key Features</p>
+  <h2 id="s5-h1"   class="h2">開発者が求めた<span class="accent">動画ワークフロー</span></h2>
+  <ul id="s5-list"  class="feature-list" style="list-style:none">
+    <li id="s5-f1" class="feature-item">GSAP アニメーション → そのままMP4出力</li>
+    <li id="s5-f2" class="feature-item">Gitでバージョン管理、CIでレンダリング</li>
+    <li id="s5-f3" class="feature-item">Headless Chrome + FFmpeg — 完全オープンソース</li>
+    <li id="s5-f4" class="feature-item">日本語・多言語テキスト完全対応</li>
+  </ul>
+</section>
+
+<!-- ── SCENE 6: CTA (38–45s, track 1) ── -->
+<section id="scene6" class="scene clip" data-start="38" data-duration="7" data-track-index="1">
+  <div id="s6-inner">
+    <p  id="s6-label" class="label">Get Started</p>
+    <div id="s6-big">今すぐ試す。</div>
+    <p   id="s6-url">npm install -g hyperframes</p>
+    <div id="s6-div"  class="divider" style="background:#00c3ff;margin-top:48px"></div>
+    <p   id="s6-sub"  class="body" style="margin-top:32px">HeyGen HyperFrames — Apache 2.0 ライセンス</p>
+  </div>
+</section>
+
+</div><!-- #root -->
+
+<script>
+(function () {
+  window.__timelines = window.__timelines || {};
+  const tl = gsap.timeline({ paused: true });
+
+  /* ── Scene 1 entrance (0s) ── */
+  tl.from('#s1-glow',  { scale: 0.62, opacity: 0, duration: 1.8, ease: 'power2.out' }, 0.1);
+  tl.from('#s1-label', { y: 26, opacity: 0, duration: 0.48, ease: 'power3.out' }, 0.28);
+  tl.from('#s1-h1',    { y: 68, opacity: 0, duration: 0.62, ease: 'expo.out' }, 0.52);
+  tl.from('#s1-h2',    { y: 68, opacity: 0, duration: 0.70, ease: 'expo.out' }, 0.80);
+
+  /* ── Transition 1→2 blur crossfade (4.5s) ── */
+  tl.to('#scene1',   { filter: 'blur(10px)', scale: 1.03, opacity: 0, duration: 0.5, ease: 'power2.inOut' }, 4.5);
+  tl.fromTo('#scene2', { filter: 'blur(10px)', scale: 0.97, opacity: 0 },
+                       { filter: 'blur(0px)',  scale: 1,    opacity: 1, duration: 0.5, ease: 'power2.inOut' }, 4.6);
+
+  /* ── Scene 2 entrance ── */
+  tl.from('#s2-label', { y: 26, opacity: 0, duration: 0.45, ease: 'power3.out' }, 5.0);
+  tl.from('#s2-h1',    { y: 60, opacity: 0, duration: 0.60, ease: 'expo.out' },   5.2);
+  tl.from('#s2-body',  { y: 40, opacity: 0, duration: 0.55, ease: 'power2.out' }, 5.6);
+  tl.from('#s2-div',   { scaleX: 0, opacity: 0, duration: 0.45, ease: 'expo.out', transformOrigin: 'left center' }, 6.0);
+
+  /* ── Transition 2→3 blur crossfade (10s) ── */
+  tl.to('#scene2',   { filter: 'blur(10px)', scale: 1.03, opacity: 0, duration: 0.5, ease: 'power2.inOut' }, 10.0);
+  tl.fromTo('#scene3', { filter: 'blur(10px)', scale: 0.97, opacity: 0 },
+                       { filter: 'blur(0px)',  scale: 1,    opacity: 1, duration: 0.5, ease: 'power2.inOut' }, 10.1);
+
+  /* ── Scene 3 entrance ── */
+  tl.from('#s3-label', { y: 26, opacity: 0, duration: 0.45, ease: 'power3.out' }, 10.5);
+  tl.from('#s3-h1',    { y: 60, opacity: 0, duration: 0.60, ease: 'expo.out' },   10.7);
+  tl.from('#s3-code',  { y: 48, opacity: 0, duration: 0.65, ease: 'expo.out' },   11.2);
+
+  /* ── Transition 3→4 blur crossfade (18s) ── */
+  tl.to('#scene3',   { filter: 'blur(10px)', scale: 1.03, opacity: 0, duration: 0.5, ease: 'power2.inOut' }, 18.0);
+  tl.fromTo('#scene4', { filter: 'blur(10px)', scale: 0.97, opacity: 0 },
+                       { filter: 'blur(0px)',  scale: 1,    opacity: 1, duration: 0.5, ease: 'power2.inOut' }, 18.1);
+
+  /* ── Scene 4 entrance ── */
+  tl.from('#s4-label', { y: 26, opacity: 0, duration: 0.45, ease: 'power3.out' }, 18.5);
+  tl.from('#s4-h1',    { y: 50, opacity: 0, duration: 0.55, ease: 'expo.out' },   18.7);
+  tl.from('#s4-s1',    { y: 60, opacity: 0, duration: 0.55, ease: 'expo.out' },   19.2);
+  tl.from('#s4-s2',    { y: 60, opacity: 0, duration: 0.55, ease: 'expo.out' },   19.5);
+  tl.from('#s4-s3',    { y: 60, opacity: 0, duration: 0.55, ease: 'expo.out' },   19.8);
+
+  /* ── Transition 4→5 blur crossfade (28s) ── */
+  tl.to('#scene4',   { filter: 'blur(10px)', scale: 1.03, opacity: 0, duration: 0.5, ease: 'power2.inOut' }, 28.0);
+  tl.fromTo('#scene5', { filter: 'blur(10px)', scale: 0.97, opacity: 0 },
+                       { filter: 'blur(0px)',  scale: 1,    opacity: 1, duration: 0.5, ease: 'power2.inOut' }, 28.1);
+
+  /* ── Scene 5 entrance ── */
+  tl.from('#s5-label', { y: 26, opacity: 0, duration: 0.45, ease: 'power3.out' }, 28.5);
+  tl.from('#s5-h1',    { y: 50, opacity: 0, duration: 0.55, ease: 'expo.out' },   28.7);
+  tl.from('#s5-f1',    { x: -40, opacity: 0, duration: 0.50, ease: 'power2.out' }, 29.1);
+  tl.from('#s5-f2',    { x: -40, opacity: 0, duration: 0.50, ease: 'power2.out' }, 29.4);
+  tl.from('#s5-f3',    { x: -40, opacity: 0, duration: 0.50, ease: 'power2.out' }, 29.7);
+  tl.from('#s5-f4',    { x: -40, opacity: 0, duration: 0.50, ease: 'power2.out' }, 30.0);
+
+  /* ── Transition 5→6 blur crossfade (38s) ── */
+  tl.to('#scene5',   { filter: 'blur(10px)', scale: 1.03, opacity: 0, duration: 0.5, ease: 'power2.inOut' }, 38.0);
+  tl.fromTo('#scene6', { filter: 'blur(10px)', scale: 0.97, opacity: 0 },
+                       { filter: 'blur(0px)',  scale: 1,    opacity: 1, duration: 0.5, ease: 'power2.inOut' }, 38.1);
+
+  /* ── Scene 6 entrance ── */
+  tl.from('#s6-label', { y: 26, opacity: 0, duration: 0.45, ease: 'power3.out' }, 38.5);
+  tl.from('#s6-big',   { y: 80, opacity: 0, duration: 0.70, ease: 'expo.out' },   38.7);
+  tl.from('#s6-url',   { y: 40, opacity: 0, duration: 0.55, ease: 'expo.out' },   39.3);
+  tl.from('#s6-div',   { scaleX: 0, opacity: 0, duration: 0.50, ease: 'expo.out', transformOrigin: 'left center' }, 39.7);
+  tl.from('#s6-sub',   { y: 30, opacity: 0, duration: 0.50, ease: 'power2.out' }, 40.1);
+
+  /* ── Scene 6 exit: fade then visibility kill on child (not clip) ── */
+  tl.to('#scene6',    { opacity: 0, duration: 1.0, ease: 'power1.inOut' }, 44.0);
+  tl.set('#s6-inner', { visibility: 'hidden' }, 45.0);
+
+  window.__timelines['main'] = tl;
+})();
+</script>
+</body>
+</html>
